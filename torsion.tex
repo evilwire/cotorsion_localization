@@ -1,0 +1,63 @@
+\section{(Co)torsion theory}
+
+The language and methodology follows [BuJaVer]. For the 
+following, let $\Cat{A}$ be an abelian category.
+
+\begin{definition}
+Let $F: \Cat{A} \to \Cat{A}$ be an endofunctor. We say that
+$F$ is a \emph{subobject functor} (resp. a \emph{quotient functor}
+if there exists a natural transformation $\tau$ from the identify
+functor to $F$ (resp. from $F$ to the identity functor) such that 
+for each $X \to Y$
+\[
+\begin{diagram}
+FX           & \rTo & FY           \\
+\dTo{\tau_X} &      & \dTo{\tau_Y} \\
+X            & \rTo & Y
+\end{diagram}
+\]
+such that $\tau_X$ and $\tau_Y$ are injections (resp. 
+\[
+\begin{diagram}
+X            & \rTo & Y            \\
+\dTo{\tau_X} &      & \dTo{\tau_Y} \\
+FX           & \rTo & FY
+\end{diagram}
+\]
+and $\tau_X$ and $\tau_Y$ are surjections.)
+\end{definition}
+
+\begin{definition}
+We say that $F$ is \emph{idempotent} if $FF = F$.
+\end{definition}
+
+\begin{definition}
+We say that a subobject functor $F$ is a \emph{pre-radical} 
+if for each $X \in \Cat{A}$, $F(X/F(X)) = 0$. We say that a 
+quotient $F$ is a \emph{pre-coradical} if $F(\ker X \to FX) = 0$.
+\end{definition}
+
+\begin{definition}
+A pre-radical (resp. pre-coradical) $F$ is a \emph{radical} (resp. 
+coradical if $F$ is left exact (resp. right exact).
+\end{definition}
+
+\begin{rmk}
+Notice that a quotient and subobject are dual notions. Similarly,
+(pre-)coradical is just the dual of radical. In the following, we
+consider only subobject functors, and (pre-)radical. Dual of the 
+results whose arguments involve only ``flipping the arrows'' will
+be stated without proof.
+\end{rmk}
+
+\begin{rmk}
+In the case where $\Cat{A}$ is small, then via Mitchell embedding
+there exists an embedding of $\Cat{A}$ as a subcategory of $R$-mod
+for some suitable ring $R$. In this case, the subobject functors, 
+quotient functors, idempotence, (pre-)radicals, and (pre-)coradicals
+corresponds to their counterparts in the ring theoretic setting.
+\end{rmk}
+
+\begin{prop}
+
+\end{prop}
