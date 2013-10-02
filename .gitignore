@@ -1,0 +1,7 @@
+# ignore swap files from vim
+*.sw*
+
+# ignore pdf outputs, aux, and logs
+*.log
+*.pdf
+*.aux
