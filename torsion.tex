@@ -137,3 +137,13 @@ we do not yet know, exact. Nonetheless, $F(X/Y) \to X/Y \to X/F(X)$
 is the 0 map, and therefore, there exists some map $F(X/Y) \to FX/Y$
 which is an injection. It follows that $F(X/Y) \simeq FX/Y$.
 \end{proof}
+
+\begin{definition}
+Let $\Cat{A}$ be an abelian category. A \emph{torsion theory} for
+$\Cat{A}$ is a pair $(\Cat{T}, \Cat{F})$ of full subcategories 
+called the \emph{torsion subcategory} and \emph{torsion-free 
+subcategory} respectively, where the objects of $\Cat{T}$ are
+objects $M$ such that $\hom_{\Cat{A}}(M, N) = 0$ for every $N 
+\in \Cat{F}$ and objects of $\Cat{F}$ are objects $N$ such that
+$\hom_{\Cat{A}}(M, N) = 0$ for every object $M \in \Cat{T}$.
+\end{definition}
