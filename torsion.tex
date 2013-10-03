@@ -97,5 +97,43 @@ quotient of $FX$, then $F(\ker X \to Y)$ is isomorphic to $\ker
 FX \to Y$.
 \end{prop}
 \begin{proof}
+For $0 \to Y \to X \to X/Y \to 0$, consider
+\[
+\begin{diagram}
+0 & \rTo & Y        & \rTo & FX     & \rTo & F(X/Y)   \\
+  &      & \dEquals &      & \dInto &      & \dInto   \\
+0 & \rTo & Y        & \rTo & X      & \rTo & X/Y      & \rTo & 0
+\end{diagram}
+\]
+Since $F(X/Y) \to X/Y$ is an injection, 
+\begin{align*}
+\ker FX \to F(X/Y) &= \ker FX \to F(X/Y) \to X/Y \\
+                   &= \ker FX \to X \to X/Y \\
+                   &= \ker X \to X/Y \\
+                   &= Y.
+\end{align*}
+where the second to last equality comes from the fact that $FX 
+\to X$ is an injection.
 
+Applying the Snake Lemma to
+\[
+\begin{diagram}
+0 & \rTo & Y        & \rTo & FX       & \rTo & FX/Y   & \rTo & 0 \\
+  &      & \dEquals &      & \dEquals &      & \dTo   \\
+0 & \rTo & Y        & \rTo & FX       & \rTo & F(X/Y) 
+\end{diagram}
+\]
+we see that the map $FX/Y \to F(X/Y)$ is an injection. Now
+consider
+\[
+\begin{diagram}
+0 & \rTo & FX/Y     & \rTo & F(X/Y) & \rTo & F(X/F(X)) = 0 \\
+  &      & \dEquals &        & \dInto &      & \dInto        \\
+0 & \rTo & FX/Y     & \rTo   & X/Y    & \rTo & X/F(X)
+\end{diagram}
+\]
+where the bottom sequence is exact, and the top ought to be, but
+we do not yet know, exact. Nonetheless, $F(X/Y) \to X/Y \to X/F(X)$
+is the 0 map, and therefore, there exists some map $F(X/Y) \to FX/Y$
+which is an injection. It follows that $F(X/Y) \simeq FX/Y$.
 \end{proof}
