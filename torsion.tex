@@ -43,11 +43,11 @@ coradical if $F$ is left exact (resp. right exact).
 \end{definition}
 
 \begin{rmk}
-Notice that a quotient and subobject are dual notions. Similarly,
-(pre-)coradical is just the dual of radical. In the following, we
-consider only subobject functors, and (pre-)radical. Dual of the 
-results whose arguments involve only ``flipping the arrows'' will
-be stated without proof.
+Notice that being a quotient and being a subobject are dual 
+notions. Similarly, (pre-)coradical is just the dual of radical. 
+In the following, we consider only subobject functors, and 
+(pre-)radical. Dual of the results whose arguments involve only 
+``flipping the arrows'' will be stated without proof.
 \end{rmk}
 
 \begin{rmk}
@@ -59,5 +59,35 @@ corresponds to their counterparts in the ring theoretic setting.
 \end{rmk}
 
 \begin{prop}
-
+Any left exact subobject functor $F$ is idempotent. Dually, any
+right exact quotient functor is idempotent.
 \end{prop}
+\begin{proof}
+Fix $X \in \Cat{A}$. Since $F$ is left exact, $F^2X = \ker FX \to 
+F(X/FX)$.
+However, we have
+\[
+\begin{diagram}
+0    &      & 0       \\
+\dTo &      & \dTo    \\
+FX   & \rTo & F(X/FX) \\
+\dTo &      & \dTo    \\
+X    & \rTo & X/FX
+\end{diagram}
+\]
+and since $F(X/FX) \to FX$ is an injection, and
+\begin{align*}
+F^2X &= \ker FX \to F(X/FX) \\
+     &= \ker FX \to F(X/FX) \to FX \\
+     &= \ker FX \to X \to X/FX \\
+     &= FX.
+\end{align*}
+\end{proof}
+
+\begin{prop}
+Let $F$ be a preradical of $\Cat{A}$. If $Y$ is a subobject of $FX$,
+then $F(X/Y) = FX/Y$. Dually, if $Y$ was a quotient of $FX$, then
+$F(\ker X \to Y) = \ker FX \to Y$.
+\end{prop}
+\begin{proof}
+\end{proof}
