@@ -5,10 +5,9 @@ following, let $\Cat{A}$ be an abelian category.
 
 \begin{definition}
 Let $F: \Cat{A} \to \Cat{A}$ be an endofunctor. We say that
-$F$ is a \emph{subobject functor} (resp. a \emph{quotient functor}
-if there exists a natural transformation $\tau$ from the identify
-functor to $F$ (resp. from $F$ to the identity functor) such that 
-for each $X \to Y$
+$F$ is a \emph{subobject functor} if there exists a natural 
+transformation $\tau$ from the identify functor to $F$
+such that for each $X \to Y$, which gives rise to the following:
 \[
 \begin{diagram}
 FX           & \rTo & FY           \\
@@ -16,7 +15,14 @@ FX           & \rTo & FY           \\
 X            & \rTo & Y
 \end{diagram}
 \]
-such that $\tau_X$ and $\tau_Y$ are injections (resp. 
+$\tau_X$ and $\tau_Y$ are injections 
+\end{definition}
+
+\begin{definition}
+The concept of a quotient functor is dual to that of a suboject
+functor. That is, $F: \Cat{A} \to \Cat{A}$ is a \emph{quotient
+functor} if there exists a natural transformation $\tau$ from $F$ 
+to the identity such that for each $X \to Y$, we have
 \[
 \begin{diagram}
 X            & \rTo & Y            \\
@@ -24,7 +30,7 @@ X            & \rTo & Y            \\
 FX           & \rTo & FY
 \end{diagram}
 \]
-and $\tau_X$ and $\tau_Y$ are surjections.)
+and $\tau_X$ and $\tau_Y$ are surjections.
 \end{definition}
 
 \begin{definition}
@@ -32,9 +38,9 @@ We say that $F$ is \emph{idempotent} if $FF = F$.
 \end{definition}
 
 \begin{definition}
-We say that a subobject functor $F$ is a \emph{pre-radical} 
-if for each $X \in \Cat{A}$, $F(X/F(X)) = 0$. We say that a 
-quotient $F$ is a \emph{pre-coradical} if $F(\ker X \to FX) = 0$.
+We say that a subobject functor $F$ is a \emph{pre-radical} (resp.
+\emph{pre-coradical}) if for each $X \in \Cat{A}$, $F(X/F(X)) = 0$
+(resp. $F(\ker X \to FX) = 0$).
 \end{definition}
 
 \begin{definition}
@@ -51,7 +57,7 @@ In the following, we consider only subobject functors, and
 \end{rmk}
 
 \begin{rmk}
-In the case where $\Cat{A}$ is small, then via Mitchell embedding
+In the case where $\Cat{A}$ is small, via Mitchell embedding 
 there exists an embedding of $\Cat{A}$ as a subcategory of $R$-mod
 for some suitable ring $R$. In this case, the subobject functors, 
 quotient functors, idempotence, (pre-)radicals, and (pre-)coradicals
@@ -75,10 +81,10 @@ FX   & \rTo & F(X/FX) \\
 X    & \rTo & X/FX
 \end{diagram}
 \]
-and since $F(X/FX) \to FX$ is an injection, and
+and since $F(X/FX) \to FX$ is an injection,
 \begin{align*}
 F^2X &= \ker FX \to F(X/FX) \\
-     &= \ker FX \to F(X/FX) \to FX \\
+     &= \ker FX \to F(X/FX) \to X/FX \\
      &= \ker FX \to X \to X/FX \\
      &= FX.
 \end{align*}
@@ -86,8 +92,10 @@ F^2X &= \ker FX \to F(X/FX) \\
 
 \begin{prop}
 Let $F$ be a preradical of $\Cat{A}$. If $Y$ is a subobject of $FX$,
-then $F(X/Y) = FX/Y$. Dually, if $Y$ was a quotient of $FX$, then
-$F(\ker X \to Y) = \ker FX \to Y$.
+then $F(X/Y)$ is isomorphic to $FX/Y$. Dually, if $Y$ was a 
+quotient of $FX$, then $F(\ker X \to Y)$ is isomorphic to $\ker 
+FX \to Y$.
 \end{prop}
 \begin{proof}
+
 \end{proof}
