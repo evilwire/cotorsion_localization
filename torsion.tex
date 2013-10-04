@@ -242,3 +242,27 @@ are both in $\Cat{T}$, it follows that $P$ must, too. However,
 $X'$ is nontrivial, contradicting the maximality of $\tilde{X}$.
 Thus, $X/\tilde{X} \in \Cat{F}$, and $X \in \Cat{T}$.
 \end{proof}
+
+\begin{prop}
+Let $(\Cat{T}, \Cat{F})$ be a pair of non-empty full subcategories
+of a well-powered abelian category $\Cat{A}$. Then $(\Cat{T}, 
+\Cat{F})$ is a torsion theory if and only if the following 
+conditions hold:
+\begin{enumerate}
+\item the only common objects of $\Cat{T}$ and $\Cat{F}$ is 0.
+
+\item for every $X \in \Cat{A}$, there exists $Y$ such that $Y \in 
+\Cat{T}$ and $X/Y \in \Cat{F}$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+\noindent $\Rightarrow$: Fix $X \in \Cat{T}$ and $X \in \Cat{F}$, 
+then $\hom_{\Cat{A}}(X,X) = 0$, so the identity is the 0 map, and
+$X = 0$.
+
+Now fix $X \in \Cat{A}$, and let $\{X_i | i \in I\}$ be the set
+of $\Cat{T}$ subobjects of $X$. The image in $X$ of the direct sum of 
+the subobjects is an object of $\Cat{T}$, the quotient by which is 
+an object in $\Cat{F}$ by the same reasoning as above.
+\end{proof}
