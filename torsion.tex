@@ -243,7 +243,7 @@ $X'$ is nontrivial, contradicting the maximality of $\tilde{X}$.
 Thus, $X/\tilde{X} \in \Cat{F}$, and $X \in \Cat{T}$.
 \end{proof}
 
-\begin{prop}
+\begin{prop}\label{prop_2_7}
 Let $(\Cat{T}, \Cat{F})$ be a pair of non-empty full subcategories
 of a well-powered abelian category $\Cat{A}$. Then $(\Cat{T}, 
 \Cat{F})$ is a torsion theory if and only if the following 
@@ -322,5 +322,23 @@ of $FX$ is itself: hence $F(F(X)) = F(X)$.
 
 By the maximality of $FX$, we see that $X/FX \in \Cat{F}$, and
 certainly, $F(X/FX) = 0$.
-
 \end{proof}
+
+\begin{prop}
+Let $F$ be an idempotent preradical of an abelian category 
+$\Cat{A}$. Let $\Cat{T}_F$ be the full subcategory of objects $X$
+of $\Cat{A}$ such that $F(X) = X$; let $\Cat{F}_F$ be the full
+subcategory of $X \in \Cat{A}$ such that $F(X) = 0$. Then $(\Cat{T}_F,
+\Cat{F}_F)$ is a torsion theory for $\Cat{A}$.
+\end{prop}
+
+\begin{proof}
+It is clear that if $X$ is an object of both $\Cat{F}$ and $\Cat{T}$,
+then $X = F(X) = 0$.
+
+Since $F(FX) = FX$, it is clear that $FX \in \Cat{T}$. Since 
+$F(X/FX) = 0$, it is clear that $X/FX \in \Cat{T}$. By Proposition
+\ref{prop_2_7}, $(\Cat{T}_F, \Cat{F}_F)$ is a torsion theory on
+$\Cat{A}$.
+\end{proof}
+
