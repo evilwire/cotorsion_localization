@@ -262,7 +262,65 @@ then $\hom_{\Cat{A}}(X,X) = 0$, so the identity is the 0 map, and
 $X = 0$.
 
 Now fix $X \in \Cat{A}$, and let $\{X_i | i \in I\}$ be the set
-of $\Cat{T}$ subobjects of $X$. The image in $X$ of the direct sum of 
-the subobjects is an object of $\Cat{T}$, the quotient by which is 
-an object in $\Cat{F}$ by the same reasoning as above.
+of $\Cat{T}$ subobjects of $X$. The image in $X$ of the direct 
+sum of the subobjects is an object of $\Cat{T}$, the quotient by 
+which is an object in $\Cat{F}$ by the same reasoning as above.
+
+Conversely, suppose $\Cat{T}, \Cat{F}$ satisfy the condition of 
+the proposition. Suppose we have $X \in \Cat{A}$ such that for all
+$Y \in \Cat{Y}$,
+\[
+\hom_{\Cat{A}}(X, Y) = 0.
+\]
+Since $X/FX \in \Cat{F}$, $X \to X/FX$ is the zero map. Hence, $X 
+= FX \in \Cat{T}$. Similarly, if $Y \in \Cat{F}$, then the 
+inclusion $FY \to Y$ is the zero map, and hence $Y/FY = Y \in 
+\Cat{F}.$
+\end{proof}
+
+\begin{definition}
+Let $\Cat{C}$ be a subcategory of an abelian category; fix $X \in
+\Cat{A}$. We say $Y$ is the \emph{largest $\Cat{C}$-subobject of 
+$X$} if $Y \in \Cat{C}$ is a subobject of $X$ that factors all 
+monomorphisms from objects in $\Cat{C}$ to $X$. That is, for 
+every diagram
+\[
+\begin{diagram}
+  &           & Y         \\
+  &           & \dInto{i} \\
+Z & \rInto{j} & X
+\end{diagram}
+\]
+where $Z \in \Cat{C}$, there exists a map $Z \stackrel{f}{to} Y$ 
+such that $gj = i$.
+\end{definition}
+
+\begin{por}
+For any well-powered abelian category $\Cat{A}$ and any full 
+subcategory $\Cat{C}$ closed under sums and quotients, any $X \in 
+\Cat{A}$ has a largest $\Cat{C}$-subobject.
+\end{por}
+
+\begin{prop}
+Let $(\Cat{T}, \Cat{F})$ be a torsion theory on $\Cat{A}$. Then
+the functor $F: \Cat{A} \to \Cat{T}$ that sends $X \in \Cat{A}$
+to its largest $\Cat{T}$-subobject is a idempotent preradical.
+\end{prop}
+
+\begin{proof}
+Let $f: X \to Y$ be any morphism and $FX \stackrel{i_{FX}}{X}$ 
+and $FY\stackrel{i_{FY}}{Y}$ be the $\Cat{T}$-subobjects of $X$ 
+and $Y$ respectively. Consider the image of $FX$ under $i_{FX}f$, 
+which is a $\Cat{T}$ subobject of $Y$. Hence, there exists a map 
+$\im i_{FX}f \to FY$, and define the map $Ff$ to be the 
+composition of $FX \to \im i_{FX}f \to FY$.
+
+It is clear from the construction that $F$ is a subobject functor.
+
+Since $FX \in \Cat{T}$, it is clear that the largest suboboject
+of $FX$ is itself: hence $F(F(X)) = F(X)$.
+
+By the maximality of $FX$, we see that $X/FX \in \Cat{F}$, and
+certainly, $F(X/FX) = 0$.
+
 \end{proof}
